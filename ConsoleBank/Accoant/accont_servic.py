@@ -1,5 +1,5 @@
-from Account.account import Account
-from Account.account_dao import AccountDAO
+from account import Account
+from account_dao import AccountDAO
 
 class AccountService:
     account_no_seq = 111111
