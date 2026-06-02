@@ -78,4 +78,3 @@ if __name__ == '__main__':
     print(ms.view_member_info('hyejeong'))
     print(ms.remove_member('hyejeong'))
     print(ms.view_member_info('hyejeong'))
-    
