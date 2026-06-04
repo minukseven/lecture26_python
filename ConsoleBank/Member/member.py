@@ -21,4 +21,4 @@ class Member:
         self.__password = password
     
     def __str__(self):
-        return f'{self.__member_no}\t{self.__id}\t{self.__name}\t{self.__password}'   
+        return f'{self.__member_no}\t{self.__id}\t{self.__name}\t{self.__password}'

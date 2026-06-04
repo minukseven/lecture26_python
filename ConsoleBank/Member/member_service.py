@@ -1,5 +1,5 @@
-from member_dao import MemberDAO
-from member import Member
+from Member.member_dao import MemberDAO
+from Member.member import Member
 
 #==================
 # 회원 관리 서비스 로직 (Controller) : MemberService
@@ -63,18 +63,18 @@ class MemberService:
 
 if __name__ == '__main__':
     ms = MemberService(MemberDAO())
-    ms.join(Member('hyejeong', '1234', '이혜정'))
-    ms.join(Member('curi', '1111', '큐리'))
+    ms.join(Member('alsdnr', '1234', 'minuk'))
+    ms.join(Member('rhfm', '1111', '고르'))
     members = ms.list_members()
     for member in members:
         print(member)
-    ms.login('curi', '1111')
+    ms.login('alsdnr', '1111')
     print(ms.current_user)
     ms.logout()
     print(ms.current_user)
-    print(ms.view_member_info('curi'))
+    print(ms.view_member_info('alsdnr'))
     ms.login(MemberService.ADMIN_ID, MemberService.ADMIN_PASSWORD)
-    print(ms.update_member_password('hyejeong', '1234', '4321'))
-    print(ms.view_member_info('hyejeong'))
-    print(ms.remove_member('hyejeong'))
-    print(ms.view_member_info('hyejeong'))
+    print(ms.update_member_password('alsdnr', '1234', '4321'))
+    print(ms.view_member_info('alsdnr'))
+    print(ms.remove_member('alsdnr'))
+    print(ms.view_member_info('alsdnr'))

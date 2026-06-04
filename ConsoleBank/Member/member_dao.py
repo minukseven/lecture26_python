@@ -1,4 +1,4 @@
-from member import Member
+from Member.member import Member
 #====================
 # 회원 데이터 접근 (CRUD) : MemberDAO
 class MemberDAO:
@@ -40,29 +40,29 @@ class MemberDAO:
 # 클래스 동작 테스트 (단위테스트, unit test)
 if __name__ == '__main__':
     dao = MemberDAO()
-    print(dao.is_exist('hyejeong'))
+    print(dao.is_exist('alsdnr'))
 
-    member = Member('hyejeong', '1234', '이혜정')
+    member = Member('alsdnr', '1234', '민욱')
     dao.insert_member(member)
-    member = Member('curi', '1234', '1234')
+    member = Member('alsdnr', '1234', 'AAA')
     dao.insert_member(member)
-    print(dao.get_member_info('hyejeong'))
-    print(dao.get_member_info('curi'))
+    print(dao.get_member_info('alsdnr'))
+    print(dao.get_member_info('AAA'))
 
     members = dao.get_all_members()
     for member in members:
         print(member)
 
-    member = dao.get_member_info('hyejeong')
+    member = dao.get_member_info('alsdnr')
     if member:
         member.set_password('1111')
-        dao.update_member_info('hyejeong', member)
+        dao.update_member_info('alsdnr', member)
     
     members = dao.get_all_members()
     for member in members:
         print(member)
 
-    dao.remove_member('hyejeong')
+    dao.remove_member('alsdnr')
     members = dao.get_all_members()
     for member in members:
         print(member)

@@ -13,8 +13,8 @@ class MemberManager:
     def main(self):
         self.show_welcome()
         # 테스트용
-        # self.ms.join(Member('hyejeong', '1234', '이혜정'))
-        # self.ms.join(Member('curi', '1234', '큐리'))
+        # self.ms.join(Member('minuk', '1234', '박민욱'))
+        # self.ms.join(Member('curi', '1234', '고르'))
         while True:
             menu = self.select_menu(MemberManager.start_menu)
             if menu == 0: break
